@@ -4,74 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Question Paper</title>
-    <link rel="stylesheet" href="css/styile.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Quiz Page</title>
 </head>
 <body>
-        <header class="container-fluid ">
-                <h3 class="cw">
-                    JEE (Advanced) 2018 Moke Test
-                </h3>
-              </header><!--End Header code-->
-              
-              <div class="container-fluid header2 py-1">
-                  <div class="float-sm-right"><p><i class="fas fa-file-alt"></i> &nbsp;<a data-toggle="modal" data-target="#questionPaper">Question Paper</a>&nbsp; <i class="fas fa-info-circle"></i>&nbsp;<a data-toggle="modal" data-target="#instruction">Instruction</a></div>
-              </div>
- <!-- ...............................Left sidebar code ......................... -->
-    <section class="left-sidebar">
-        <div class="section px-3 py-1">
-            Question Paper
-            <div class="float-sm-right"><h6>Time Left: 10:00:15</h6></div>
+    <header><div class="top pl-2">JEE (Advanced) 2018 Mock Test</div></header>
+    <div class="qptop d-flex justify-content-end p-1">
+        <div> <a role="button" data-toggle="modal" data-target="#myModal"><span class="fa fa-file"></span> Question Paper</a></div>
+        &ensp;
+        <div> <a role="button" data-toggle="modal" data-target="#myModal1"><i class="fas fa-info-circle"></i>&nbsp;Instruction </a></div>
+    </div>
+
+    <!-- model code for question paper -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Instruction for Question Paper</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                  Attempt all question. <br>
+                  There are many question of multiple choice. 
+
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
-        <div class="paper-section section">
-            <div class="pbutton">
-                <a href="#">PHY SEC1</a>
-            </div>
-            <div class="pbutton">
-                    <a href="#">PHY SEC2</a>
-                </div>
-                <div class="pbutton">
-                        <a href="#">PHY SEC3</a>
+    </div>
+
+    <!-- model code for instructions -->
+    <div class="modal fade" id="myModal1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <h4 class="modal-title">Read Instruction Carefully</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
-                    <div class="pbutton">
-                            <a href="#">CHE SEC1</a>
-                        </div>
-                        <div class="pbutton">
-                                <a href="#">CHE SEC2</a>
-                            </div>
-                            <div class="pbutton">
-                                    <a href="#">CHE SEC3</a>
-                                </div>
-            </div>
-            <div class="section bg-primary py-1 px-1">
-                <div class="row justify-content-end">
-                    <div class="col-md-2 text-right">
-                        <select><option>
-                            English
-                        </option>
-                        <option>
-                                Hindi
-                            </option>
-                    </select>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      please fill all the mandotory fields. <br>
+                      ensure your roll no. and registration number.
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
-            <div class="question-body section">
-                <p class="px-4">
-                    
-Where does it come from?
+        </div>
+
+    <div class="qp1" >
+        <div class="d-flex justify-content-between p-1">
+            <div><button type="button" class="btn btn-primary btn-sm">Question Paper &nbsp;<span><i class="fas fa-info-circle"></i></span></button></div>
+            <div><b id="sessionMsg">Time Left : <span id="displayTime">00:00</span> min</b></div>
+        </div>
+        <div class="d-flex pl-2 subj">
+                <a href="#"> <div class="box">PHY SEC1</div></a>
+                <a href="#"> <div class="box">PHY SEC2</div></a>
+                <a href="#"> <div class="box">PHY SEC3</div></a>
+                <a href="#"> <div class="box">CHE SEC1</div></a>
+                <a href="#"> <div class="box">CHE SEC2</div></a>
+                <a href="#"> <div class="box">CHE SEC3</div></a>
+        </div>
+        <div class="contianer-fluid bg-primary d-flex justify-content-end py-1 pr-1">
+            <select name="" id="">
+            <option value="English">English</option>
+            <option value="Hindi">Hindi</option>
+            </select>
+        </div>
+        <div class="qbox">
+            <p class="px-4">
+            Where does it come from?
 Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
  classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a 
  Latin professor at
@@ -97,135 +114,76 @@ The standard chunk of Lorem Ipsum used since the 1500s
 is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from
  "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form,
   accompanied by English versions from the 1914 translation by H. Rackham.
-                </p>
-            </div>
-            
-            <div class="question-command section">
-                <div class="row">
-                    <div class="col-md-3">
-                        <button type="button" class="btn btn-outline-primary">Mark For review &amp; Next </button>
-                    </div>
-                    <div class="col-lg-7">
-                            <button type="button" class="btn btn-outline-primary">Clear Responce </button>
-                    </div>
-                    <div class="col-md-2">
-                            <button type="button" class="btn btn-primary">Save 	&amp; Next </button>
-                    </div>
-                </div>
-                </div>
+  </p>
         </div>
-    </section><!--Left sidebar code end-->
-    <!-- ........................................right sidebar code ...................................-->
-    <section class="right-sidebar">
-        <div class="user-profile">
-            <div class="row px-2 py-2 mr-0" >
-                <div class="col-lg-4">
-                    <div class="img-profile">
-                            <img src="images/profile.jpg">
-                             </div></div>
-                             <div class="col-lg-8">
-                                    <h4>Amit Kumar</h4>
-                                    <h4><small>R.N :145244910</small></h4>
-                                    </div>
-                             </div></div>
-                           
-                             <div class="question-overview border-secondary px-2 py-2">
-                               <table class="overview-table">
-                                   <tr>
-                                       <td><button class="btn btn-sm bg-success">1</button></td>
-                                       <td>Answered</td>
-                                       <td><button class="btn btn-sm bg-danger">0</button></td>
-                                       <td>Not Answered</td>
-                                   </tr>
-                                   <tr>
-                                        <td><button class="btn btn-sm">10</button></td>
-                                        <td>Not Visited</td>
-                                        <td><button class="btn btn-sm bg-warning">5</button></td>
-                                        <td>Mark for Review</td>
-                                    </tr>
-                                    <tr><td><button class="btn btn-sm bg-warning">1</button></td>
-                                        <td colspan="4"><small>Answered and mark for review (Will be consider for evalution)</small></td></tr>
-                               </table>
-                             </div>
-                             <div class="question-omr">
+    <div class="d-flex py-2 px-3 justify-content-between review">
+        <div class="d-flex ">
+            <div>
+                    <button type="button" class="btn btn-outline-primary">Mark For Review & Next</button>
+            </div>
+            <div class="px-2">
+                    <button type="button" class="btn btn-outline-primary">Clear Response</button>
+            </div>
+        </div>
+        <div>
+                <button class="btn btn-primary" type="submit" onclick="quizSaveBtn()">Save & Next</button>
+        </div>
+    </div>    
 
-                                 <div class="section px-2 py-1 bg-primary">
-                                    <h5 class="text-white">MATH SEC</h5>
-                                 </div>
-                                <h5 class="px-2">Choose a Question</h5>
-                                 <div class="px-2 py-2">
-                                        
-                                    <button type="button" class="btn">1</button>
-                                    <button type="button" class="btn">2</button>
-                                    <button type="button" class="btn">3</button>
-                                    <button type="button" class="btn">4</button>
-                                    <button type="button" class="btn">5</button>
-                                 </div>
-                                </div>
-                                <div class="section d-flex justify-content-center">
-                                    <div>
-                                    <button type="button" class="btn btn-primary mx-auto">Submit</button></div>
-                                </div>
-    </section>
-    <!--right sidebar code end-->
-    
-    <footer class="container-fluid">
-        Version: 1
-    </footer>
-    <!--Instruction -->
-    <!-- Button trigger modal -->
-
-
-<!-- Modal for question paper -->
-<div class="modal fade " id="questionPaper" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Ouestion Paper</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-            
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
     </div>
-  </div>
-</div>
-<!-- Modal for Instruction -->
-<div class="modal fade" id="instruction" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-             <small><h5 class="modal-title" id="exampleModalLongTitle">Instruction</h5></small> 
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                    <h3>IMPORTANT NOTE</h3>
-                    <ul>
-                        <li><p>purpose of this MOCK TEST is to familiarize the candidates with the Computer Based Test (CBT) environment of the JEE (Advanced) – 2018.
-                    
-                                Candidates may use this MOCK TEST to get acclimatized with the functionalities of CBT.</p>
-                                </li>
-                                <li>
-                                       <p>This MOCK TEST has used previous years' questions of JEE (Advanced).</p> 
-                                </li>
-                                <li>
-                    <p>The type of questions and illustrative marking scheme in this MOCK TEST is in NO WAY INDICATIVE of the type of questions and marking scheme of JEE (Advanced) – 2018 question paper.
-                    </p>
-                                </li>
-                    </ul> 
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
+
+    <div class="side">
+        <div class="aside1 d-flex">
+            <div class="img-profile"><img src="images/profile.jpg" alt=""></div>
+            <div class="my-4"><h5>Rahul Kumar</h5><div>R.N : 123456789</div></div>
         </div>
-      </div>
+        <div>
+          <table class="m-2 tblcontent">  
+            <tr>
+                
+                <td><button class="btn btn-success btn-sm">1</button></td>
+                <td>Answer</td>
+                <td><button class="btn btn-danger btn-sm">0</button></td>
+                <td class="pr-5">Not Answered</td>
+               
+            </tr>
+            <tr>
+                <td><button class="btn btn-secondary btn-sm">10</button></td>
+                <td>Not Visited</td>
+               
+                <td><button type="button" class="btn btn-warning btn-sm">5</button></td>
+                <td>Mark For Review</td>
+
+            </tr>
+            <tr>
+                <td><button type="button" class="btn btn-primary btn-sm">2</button></td>
+               <td><small>Answered and mark for review (Will be consider for evaluation)</small></td> 
+            </tr>
+          </table>
+        </div>
+        <div class="aside3">
+            <div>
+                <div class="bg-primary aside3-top py-2 pl-2"><b>MATH SEC</b></div>
+            </div>
+            <div>
+                <div><h5>Choose a Question</h5></div>
+                <div class="d-flex">
+                    <button type="button" class="btn mx-1 btn-secondary">1</button>
+                    <button type="button" class="btn mx-1 btn-secondary">2</button>
+                    <button type="button" class="btn mx-1 btn-secondary">3</button>
+                    <button type="button" class="btn mx-1 btn-secondary">4</button>
+                    <button type="button" class="btn mx-1 btn-secondary">5</button>
+                </div>
+            </div>
+            <div class="quizSubmitBtn">
+                <a role="button" href="close.html" class="btn btn-primary">Submit</a>
+            </div>
+        </div>
+    </div>
+  <footer class="container-fluid">Version:1</footer>
+
+
+  <script src="./script.js"></script>
+
 </body>
 </html>

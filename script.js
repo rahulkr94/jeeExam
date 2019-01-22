@@ -4,16 +4,16 @@ var validateUserIdPass = function validateUserIdPass(){
    var userId = document.getElementById("userName").value;
    var pswrd = document.getElementById("password").value;
    if( userId == 'testing' && pswrd == 'test1234'){
-     sessionTimerCount();
      alert("Welcome ! You Login Successfully");
      location.href = 'instructions.html';
+     sessionTimerCount();
     }else {
         attempt--;
-        alert("You have left " + attempt + "attempts.");
+        alert("You have left " + attempt + " attempts.");
         document.getElementById("errorMsg").innerHTML = "Wrong Id or Password!";
         //location.href = 'fail.html';
         if(attempt == 0){
-          alert("You attempt maximum number of attempt! Please try after some time Hrs")
+          alert("You attempt maximum number of login! Please try after some time.")
           document.getElementById("userName").disabled = true;
           document.getElementById("password").disabled = true;
           document.getElementById("submit").disabled = true;
@@ -24,7 +24,7 @@ var validateUserIdPass = function validateUserIdPass(){
 
  // ----------------instructions page session code--------------------------
  var sessionTimerCount = function sessionTimerCount(){
-  var timeOut = 10;
+  var timeOut = 5;
   var secondsTimer = null;
   var secondsCounter = 0;
  
