@@ -1,9 +1,9 @@
 // validate user id and pass
 var attempt = 3;  
 var validateUserIdPass = function validateUserIdPass(){
-   var userId = document.getElementById("userName").value;
+   var email = document.getElementById("email").value;
    var pswrd = document.getElementById("password").value;
-   if( userId == 'testing' && pswrd == 'test1234'){
+   if( email == 'test@gmail.com' && pswrd == 'test1234'){
      alert("Welcome ! You Login Successfully");
      location.href = 'instructions.html';
      sessionTimerCount();
@@ -14,7 +14,7 @@ var validateUserIdPass = function validateUserIdPass(){
         //location.href = 'fail.html';
         if(attempt == 0){
           alert("You attempt maximum number of login! Please try after some time.")
-          document.getElementById("userName").disabled = true;
+          document.getElementById("email").disabled = true;
           document.getElementById("password").disabled = true;
           document.getElementById("submit").disabled = true;
           return false;
